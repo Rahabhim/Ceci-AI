@@ -16,6 +16,7 @@ import pyttsx3
 import datetime
 import speech_recognition as sr
 import wikipedia #pip install wikipedia
+import smtplib
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -113,6 +114,13 @@ def takeCommand():
 
     return query
 
+# def sendmail(to, content):
+#     server = smtplib.SMTP("smtp.gmail.com", 587)
+#     server.ehlo()
+#     server.starttls()
+#     server.login("email@gmail.com", "password")
+#     server.sendmail("email@gmail.com", to, content)
+#     server.close()
 
 if __name__ == "__main__":
     wishme()
@@ -154,3 +162,13 @@ if __name__ == "__main__":
             wikipedia.set_lang("es")
             result = wikipedia.summary(query, sentences = 2)
             speak(result)
+        # elif "send email" in query:
+        #     try:
+        #         speak("Que debo decir?")
+        #         content = takeCommand()
+        #         to = "xyz@gmail.com"
+        #         sendmail(to, content)
+        #         speak("Email enviado con éxito")
+        #     except Exception as e:
+        #         speak(e)
+        #         speak("No se pudo enviar el email")
