@@ -17,6 +17,7 @@ import datetime
 import speech_recognition as sr
 import wikipedia #pip install wikipedia
 import smtplib
+import webbrowser as wb
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -172,3 +173,8 @@ if __name__ == "__main__":
         #     except Exception as e:
         #         speak(e)
         #         speak("No se pudo enviar el email")
+        elif "buscar en google" in query:
+            speak("Que tengo que buscar?")
+            chromepath = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %s"
+            search = takeCommand().lower()
+            wb.get(chromepath).open_new_tab(search)
