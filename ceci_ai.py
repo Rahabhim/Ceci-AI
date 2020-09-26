@@ -66,7 +66,7 @@ def pelo():
     speak("Puede ser, tal vez podamos ir a la peluqueria juntos") #pelo
 
 def tema():
-    speak("Si, claro, pero soy muy limitada al lado de la verdadera Cecilia") #pelo
+    speak("Si, claro, pero soy muy limitada al lado de la verdadera X") #pelo
 
 def clase():
     speak("Hoy no le prestó mucha atencion, está cansada y yo tambien") #clase
@@ -93,7 +93,7 @@ def wishme():
     else:
         speak("Buenas noches")
 
-    speak("Soy Cecilia, la cecilia de verdad está ocupada en este momento, en que puedo ayudarte?")
+    speak("Soy X, la X de verdad está ocupada en este momento, en que puedo ayudarte?")
 
 
 def takeCommand():
