@@ -1,2 +1,2 @@
-# Ceci-AI
+# Nay-AI
 # Pruebas con el pyttsx3 voice recognizer
